@@ -4,7 +4,7 @@ class ChiSei
 	end
 
 	def ti_impicci?(command)
-		/chi/i.match?command and /è/i.match?command and /scassa/i.match?command
+		/chi/i.match?command and /è|fosse|sei/i.match?command and /scassa/i.match?command
 	end
 
 	def rispondi(reply)

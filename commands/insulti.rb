@@ -2,6 +2,7 @@ class Insulti
 
 	def initialize(bot)
 		@bot = bot
+		@saluti=inizializza_saluti
 	end
 
 	def ti_impicci?(command)
@@ -9,9 +10,16 @@ class Insulti
 	end
 
 	def rispondi(reply)
-		reply.text='Ciao, sono mandingo e nel culo te lo spingo!'
+		reply.text=@saluti[rand(@saluti.length)]
 		reply.send_with(@bot)
 	end
 
+	def inizializza_saluti
+		risposte=[]
+		risposte<<'Ciao, sono mandingo e nel culo te lo spingo.'
+		risposte<<'Ci stai provando con me?'
+		risposte<<'Non te lo do così facilmente'
+		risposte
+	end
 
 end
