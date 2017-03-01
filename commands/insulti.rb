@@ -10,7 +10,7 @@ class Insulti
 	end
 
 	def rispondi(reply)
-		reply.text=@saluti[rand(@saluti.length)]
+		reply.text=@saluti.sample
 		reply.send_with(@bot)
 	end
 
