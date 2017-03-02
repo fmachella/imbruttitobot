@@ -9,7 +9,7 @@ class Insulti
 		/ciao/i.match?command
 	end
 
-	def rispondi(reply)
+	def rispondi(reply, message)
 		reply.text=@saluti.sample
 		reply.send_with(@bot)
 	end
